@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rachuonyo County Hospital - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginContainer">
+        <h1>Rachuonyo County Hospital Management System</h1>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <p id="error" style="color: red; display: none;">Invalid credentials. Try username: admin, password: password.</p>
+    </div>
+
+    <div id="mainContainer" style="display: none;">
+        <h1>Rachuonyo County Hospital Management System</h1>
+        <h2>Patient Registration</h2>
+        <form id="patientForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="id">National ID / NHIF Number:</label>
+            <input type="text" id="id" required>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" required>
+            
+            <button type="submit">Register Patient</button>
+        </form>
+        
+        <div id="records">
+            <h3>Registered Patients</h3>
+            <ul id="patientList"></ul>
+        </div>
+        <button id="logout">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
